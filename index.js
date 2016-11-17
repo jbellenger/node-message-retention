@@ -1,5 +1,6 @@
 const http = require('http');
 const heapdump = require('heapdump');
+const process = require('process');
 
 const agent = new http.Agent({ keepAlive: true });
 const onServerReady = (server) => {
@@ -14,6 +15,7 @@ const onServerReady = (server) => {
 const onRequest = (res) => {
   heapdump.writeSnapshot((err, filename) => {
     console.log(`wrote ${require.resolve('./' + filename)}`);
+    process.exit();
   });
 };
 
