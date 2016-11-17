@@ -1,0 +1,14 @@
+{
+  "name": "node-message-retention",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "author": "James Bellenger",
+  "license": "ISC",
+  "dependencies": {
+    "heapdump": "^0.3.7"
+  }
+}
